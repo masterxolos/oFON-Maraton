@@ -52,12 +52,12 @@ public class MoneySystem : MonoBehaviour
 
     private IEnumerator ReduceMoney(GameObject reducerObject)
     {
+        yield return new WaitForSeconds(0.8f);
         while (playerMoney > 0 && reducerObject.GetComponent<MoneyReducer>().reducerMoney1 > 0)
         {
-            yield return new WaitForSeconds(0.8f);
-            playerMoney -= 5;
-            reducerObject.GetComponent<MoneyReducer>().reducerMoney1 -= 5;
-            yield return new WaitForSeconds(0.02f);
+            playerMoney -= 2;
+            reducerObject.GetComponent<MoneyReducer>().reducerMoney1 -= 2;
+            yield return new WaitForSeconds(0.01f);
         }
     }
 }

@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/ErdemSahnesii.unity
+    guid: b37537491cc85634eb47d8eb0b46b14a
   m_configObjects: {}

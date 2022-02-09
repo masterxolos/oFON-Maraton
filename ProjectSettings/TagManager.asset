@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - PickupPillow
+  - MoneyReducer
+  - Collect
+  - Collected
   layers:
   - Default
   - TransparentFX

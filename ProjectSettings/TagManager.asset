@@ -8,6 +8,9 @@ TagManager:
   - MoneyReducer
   - Collect
   - Collected
+  - Beauty
+  - "\u0130ntelligence"
+  - Fun
   layers:
   - Default
   - TransparentFX

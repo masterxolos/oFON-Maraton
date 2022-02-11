@@ -1,18 +1,20 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
-public class BeautyGate : MonoBehaviour
+namespace GateSystem
 {
-    public int beautyNum;
-
-    private void OnCollisionEnter(Collision other)
+    public class BeautyGate : MonoBehaviour
     {
-        if (other.gameObject.CompareTag("Collected"))
+        public int beautyNum;
+
+        private void OnTriggerEnter(Collider other)
         {
-            beautyNum++;
-            Destroy(other.gameObject);
+            if (other.gameObject.CompareTag("Collected"))
+            {
+                beautyNum++;
+                other.transform.DOScale(new Vector3(0, 0, 0), 0.1f);
+                //Destroy(other.gameObject);
+            }
         }
     }
 }

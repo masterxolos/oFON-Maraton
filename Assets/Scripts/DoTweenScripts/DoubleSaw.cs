@@ -8,12 +8,8 @@ public class DoubleSaw : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.transform.DORotate(new Vector3(0,0,178), 1f).SetLoops(-1, LoopType.Yoyo);
+        gameObject.transform.DORotate(new Vector3(0,180,179), 0.3f).SetLoops(-1, LoopType.Incremental);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 }

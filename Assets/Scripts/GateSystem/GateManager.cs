@@ -12,6 +12,7 @@ public class GateManager : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             player.GetComponent<PlayerMovementController>().enabled = false;
+            Debug.Log("Player duruyoo");
         }
     }
 }

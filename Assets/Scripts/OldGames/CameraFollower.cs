@@ -6,13 +6,7 @@ public class CameraFollower : MonoBehaviour
 {
     [SerializeField] private Transform target;
     [SerializeField] private Vector3 offset;
-
     
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -24,6 +18,7 @@ public class CameraFollower : MonoBehaviour
         if (other.gameObject.CompareTag("StopCam"))
         {
             gameObject.GetComponent<CameraFollower>().enabled = false;
+            gameObject.GetComponent<CamDoTween>().enabled = true;
         }
     }
 }

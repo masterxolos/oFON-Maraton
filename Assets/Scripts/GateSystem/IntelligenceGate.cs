@@ -9,6 +9,13 @@ public class IntelligenceGate : MonoBehaviour
     [SerializeField] private GameObject[] gateBlocs = new GameObject[6];
     [SerializeField] private Material greenMat;
     private int i = 0;
+    private int k = 0;
+    [SerializeField] private int requestedHeart = 0;
+    [SerializeField] private GameObject standart;
+    [SerializeField] private GameObject afterbeauty;
+    [SerializeField] private GameObject afterbody;
+    [SerializeField] private GameObject afterstyle;
+    [SerializeField] private GameObject particle;
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Collected"))
@@ -19,6 +26,15 @@ public class IntelligenceGate : MonoBehaviour
                 i = 0;
                 if (intelNum < 6)
                 {
+                    k++;
+                    if (k == requestedHeart)
+                    {
+                        Instantiate(particle, afterstyle.transform);
+                        standart.SetActive(false);
+                        afterbeauty.SetActive(false);
+                        afterbody.SetActive(false);
+                        afterstyle.SetActive(true);
+                    }
                     gateBlocs[intelNum].GetComponent<MeshRenderer>().material = greenMat;
                     intelNum++;
                 }

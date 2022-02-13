@@ -9,6 +9,13 @@ public class FunGate : MonoBehaviour
     [SerializeField] private GameObject[] gateBlocs = new GameObject[6];
     [SerializeField] private Material greenMat;
     private int i = 0;
+    private int k = 0;
+    [SerializeField] private int requestedHeart = 0;
+    [SerializeField] private GameObject standart;
+    [SerializeField] private GameObject afterbeauty;
+    [SerializeField] private GameObject afterbody;
+    [SerializeField] private GameObject afterstyle;
+    [SerializeField] private GameObject particle;
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Collected"))
@@ -19,6 +26,15 @@ public class FunGate : MonoBehaviour
                 i = 0;
                 if (funNum < 6)
                 {
+                    k++;
+                    if (k == requestedHeart)
+                    {
+                        Instantiate(particle, afterbody.transform);
+                        standart.SetActive(false);
+                        afterbeauty.SetActive(false);
+                        afterbody.SetActive(true);
+                        afterstyle.SetActive(false);
+                    }
                     gateBlocs[funNum].GetComponent<MeshRenderer>().material = greenMat;
                     funNum++;
                 }

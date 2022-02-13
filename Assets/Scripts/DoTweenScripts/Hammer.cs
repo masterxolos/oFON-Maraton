@@ -9,6 +9,9 @@ public class Hammer : MonoBehaviour
 
     private bool goDown = true;
     private bool shouldGo = true;
+
+    [SerializeField] private int hammerIndex = 0;
+
     void Start()
     {
         StartCoroutine(DOTweenHandler());
@@ -18,8 +21,16 @@ public class Hammer : MonoBehaviour
 
     private IEnumerator DOTweenHandler()
     {
+        if(hammerIndex == 0)
+        {
+            yield return new WaitForSeconds(1f);
+        }
+        else
+        {
+            yield return new WaitForSeconds(3f);
+        }
 
-        yield return new WaitForSeconds(3f);
+       
             if (shouldGo)
             {
                 if (goDown)

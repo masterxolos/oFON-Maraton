@@ -11,6 +11,8 @@ TagManager:
   - Beauty
   - "\u0130ntelligence"
   - Fun
+  - FxTemporaire
+  - StopCam
   layers:
   - Default
   - TransparentFX

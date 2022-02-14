@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class CamDoTween : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] private GameObject matchSign;
     void Start()
     {
         StartCoroutine(CamMovement());
@@ -24,7 +24,9 @@ public class CamDoTween : MonoBehaviour
         
         gameObject.transform.DOMove(new Vector3(28.6f, -9.7f, 169.57f), 4f);
         gameObject.transform.DORotate(new Vector3(-1f, 39.3f, 0f), 4f);
-        yield return new WaitForSeconds(2.7f);
+        yield return new WaitForSeconds(7f);
+        
+        matchSign.SetActive(true);
         
     }
 }

@@ -13,7 +13,7 @@ public class CamDoTween : MonoBehaviour
     
     private IEnumerator CamMovement()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(2.8f);
         gameObject.transform.DOMove(new Vector3(1.66f, 4.24f, -3.49f), 0.8f);
         gameObject.transform.DORotate(new Vector3(13.84f, 9, 0f), 0.8f);
         yield return new WaitForSeconds(1.7f);

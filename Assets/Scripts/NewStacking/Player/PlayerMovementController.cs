@@ -17,7 +17,7 @@ public class PlayerMovementController : MonoBehaviour
     #region Movement
     private void HandleMovement()
     {
-        transform.position += Vector3.forward * Time.deltaTime * movementData.MovementSpeed;
+        transform.position += Vector3.forward * Time.deltaTime * movementData.MovementSpeed/1.5f;
     }
     #endregion
 
